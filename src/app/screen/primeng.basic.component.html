@@ -1,3 +1,5 @@
+<p-growl [(value)]="msgs"></p-growl>
+
 <div id="heroe-detail">
     <div class="row">
         <p-dataTable [value]="data">
@@ -6,12 +8,48 @@
             <p-column field="Col2" header="Column 2"></p-column>
             <p-column field="Col3" header="Column 3"></p-column>
         </p-dataTable>
-
     </div>
 </div>
 
 <div class="container">
-    konecne tu mam bootstrap
-    <br/> ...nieco
+    <br/>
+    <button type="button" (click)="showSuccess()" label="Success" class="buttonExample">Message</button>
+    <br/>
+</div>
 
+<div class="container">
+    <br/>
+    <h3 class="first">Basic {{val1}}</h3>
+    <p-rating [(ngModel)]="val1"></p-rating>
+    <br/>
+</div>
+
+<div class="container">
+    <h3>Advanced</h3>
+    <p-autoComplete [(ngModel)]="brand" [suggestions]="filteredBrands" (completeMethod)="filterBrands($event)" [size]="30" [minLength]="1"
+        placeholder="Hint: type 'v' or 'f'" [dropdown]="true">
+        <ng-template let-brand pTemplate="item">
+            <div class="ui-helper-clearfix" style="border-bottom:1px solid #D5D5D5">
+                <div style="font-size:35px;float:right;margin:10px 10px 0 0">{{brand}}</div>
+            </div>
+        </ng-template>
+    </p-autoComplete>
+    <span style="margin-left:50px">Brand: {{brand||'none'}}</span>
+</div>
+
+<div class="container">
+    <br/>
+    <div class="ui-g-12 ui-md-4">
+        <input type="text" pInputText pKeyFilter="int" placeholder="Integers">
+    </div>
+    <div class="ui-g-12 ui-md-4">
+        <input type="text" pInputText pKeyFilter="alpha" placeholder="Alphabetic">
+    </div>
+    <div class="ui-g-12 ui-md-4">
+        <input type="text" pInputText pKeyFilter="hex" placeholder="Hex">
+    </div>
+</div>
+<div class="container">
+    <br/>
+    <p-chart type="bar" [data]="dataToChart"></p-chart>
 </div>

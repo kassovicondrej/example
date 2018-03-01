@@ -19,7 +19,8 @@ import {ProgressInterceptor} from './shared/interceptors/progress.interceptor';
 import {TimingInterceptor} from './shared/interceptors/timing.interceptor';
 import {SampleModule} from 'angular-example-library';
 import { PrimengBasicComponent } from './screen/primeng.basic.component';
-import {DataTableModule} from 'primeng/primeng';
+import {DataTableModule, GrowlModule, RatingModule, AutoCompleteModule, KeyFilterModule, MessagesModule, MessageModule} from 'primeng/primeng';
+import { ChartModule } from 'primeng/components/chart/chart';
 
 @NgModule({
   imports: [
@@ -42,7 +43,14 @@ import {DataTableModule} from 'primeng/primeng';
     }),
     CoreModule,
     AppRoutingModule,
-    DataTableModule
+    DataTableModule,
+    GrowlModule,
+    RatingModule,
+    AutoCompleteModule,
+    KeyFilterModule,
+    MessagesModule,
+    MessageModule,
+    ChartModule
   ],
   declarations: [
     AppComponent,
