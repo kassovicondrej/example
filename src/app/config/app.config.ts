@@ -8,6 +8,8 @@ export const AppConfig: IAppConfig = {
   routes: {
     heroes: 'heroes',
     primeng: 'primeng',
+    galleria: 'Galleria',
+    table: 'Table',
     error404: '404'
   },
   endpoints: {

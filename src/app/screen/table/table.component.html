@@ -1,0 +1,13 @@
+<div class="container">
+    <br/>
+    <br/>
+    <br/>
+    <p-dataTable [value]="studentlist" sortMode="multiple" [paginator]="true" rows="1" [rowsPerPageOptions]="[1,20,30,150,200]">
+        <p-column class="a" *ngFor="let col of cols" [field]="col.field" [header]="col.header"  [sortable]="true"></p-column>
+        <p-column field="" header="" [style]="{'width':'25px'}">
+            <ng-template let-item let-data="rowData" pTemplate="body">
+                <button type="button" pButton (click)="nieco()" icon="fa-pencil"></button>
+            </ng-template>
+        </p-column>
+    </p-dataTable>
+</div>

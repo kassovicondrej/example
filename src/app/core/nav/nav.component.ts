@@ -36,11 +36,13 @@ export class NavComponent {
   }
 
   private loadMenus(): void {
-    this.translateService.get(['home', 'heroesList', 'primeNG-Basic'], {}).subscribe((texts: any) => {
+    this.translateService.get(['home', 'heroesList', 'primeNG-Basic', 'Galleria', 'Table'], {}).subscribe((texts: any) => {
       this.menuItems = [
         {link: '/', name: texts['home']},
         {link: '/' + AppConfig.routes.heroes, name: texts['heroesList']},
-        {link: '/' + AppConfig.routes.primeng, name: texts['primeNG-Basic']}
+        {link: '/' + AppConfig.routes.primeng, name: texts['primeNG-Basic']},
+        {link: '/' + AppConfig.routes.galleria, name: texts['Galleria']},
+        {link: '/' + AppConfig.routes.table, name: texts['Table']}
       ];
     });
   }
