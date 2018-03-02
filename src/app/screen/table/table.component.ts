@@ -41,7 +41,7 @@ export class TableComponent implements OnInit {
     }
 
     nieco() {
-        console.log('as');
+        console.log('Klikol som');
     }
 
 }
